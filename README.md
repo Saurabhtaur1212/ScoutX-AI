@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ScoutX AI — Esports Scouting & Multi-Roster Intelligence
 
 A hackathon-ready full-stack prototype for player scouting, role-specific scoring, recruitment recommendations, and multi-game roster management.
@@ -114,3 +115,7 @@ The current demo persists feedback and video links in JSON files under `backend/
 
 ## Production notes
 This is a functional prototype, not a production-ready recruitment system. Before production, add real authentication/authorization, PostgreSQL migrations, audit logging, data licensing checks, rate limiting, backups, and validated models. Do not use simulated scores to make real recruitment decisions.
+=======
+# ScoutX-AI
+ScoutX AI is an AI-assisted esports scouting and multi-roster intelligence platform. It helps organizations discover  players, compare game-specific performance, identify role fit, build balanced rosters, and track player development  across multiple titles.  
+>>>>>>> 9d93bf71ed2f66a1ac72ae5901d8fbd4117850f6
