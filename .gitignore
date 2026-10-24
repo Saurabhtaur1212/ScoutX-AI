@@ -1,0 +1,21 @@
+# Node / Next.js
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local demo data (generated at runtime; keep template only)
+backend/data/players.json
+backend/data/teams.json
+backend/data/scout_feedback.json
+backend/data/video_evidence.json
+
+# Environment files
+.env
+.env.local
