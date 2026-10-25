@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException, UploadFile, File, Query
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from typing import Optional
+import os
 import pandas as pd
 import io
 
@@ -11,12 +12,13 @@ from .intelligence import router as intelligence_router
 
 app = FastAPI(title="ScoutX AI API", version="1.0.0",
               description="Esports scouting and multi-roster intelligence prototype. Demo data is simulated.")
+cors_origins = os.getenv(
+    "CORS_ORIGINS",
+    "http://localhost:3000,http://127.0.0.1:3000,http://localhost:3001,http://127.0.0.1:3001",
+)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000", "http://127.0.0.1:3000",
-        "http://localhost:3001", "http://127.0.0.1:3001",
-    ],
+    allow_origins=[origin.strip() for origin in cors_origins.split(",") if origin.strip()],
     allow_credentials=True, allow_methods=["*"], allow_headers=["*"],
 )
 
